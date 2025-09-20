@@ -6,7 +6,7 @@ const Navbar = () => {
         <div className='ml-2 mt-22' >
             <HomeIcon onClick={()=>{navigate('/')}} />
             <Search className='mt-7' onClick={()=>{navigate('/search')}} />
-            <Plus className='mt-7' onClick={()=>{navigate('/post')}}/>
+            <Plus className='mt-7' onClick={()=>{navigate('/post/:id')}}/>
                 <Heart className='mt-8'  onClick={()=>{navigate('/notifications')}}/>
             <User className='mt-8' onClick={()=>{navigate('/profile')}}/>
             <Pin className='mt-20' />
