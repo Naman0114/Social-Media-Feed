@@ -1,6 +1,6 @@
 const Profile=()=>{
     return  <>
-    <h1 className="flex mx-102 my-4 font-semibold">User Profile</h1></>
+    <span className="mx-102 h-7 my-4 font-semibold">Profile</span></>
 
 }
 export default Profile;

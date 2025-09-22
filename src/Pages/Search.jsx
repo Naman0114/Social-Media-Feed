@@ -1,6 +1,6 @@
 const Search=()=>{
     return  <>
-    <h1 className="flex mx-102 my-4 font-semibold">Search</h1></>
+    <span className="mx-102 h-7 my-4 font-semibold">Search</span></>
 
 }
 export default Search;
