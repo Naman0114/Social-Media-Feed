@@ -3,6 +3,12 @@ import { useNavigate } from "react-router-dom";
 const SignUp = () => {
     const navigate = useNavigate();
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        navigate('/home');
+
+    }
+
     return (
         <>
             <div className="flex justify-evenly">
@@ -14,12 +20,12 @@ const SignUp = () => {
                     <input className="mt-2 p-3 border-2 rounded-2xl bg-gray-200 font-sans font-normal" name="username" type="text" placeholder="Name" />
                     <input className="mt-2 p-3 border-2 rounded-2xl bg-gray-200 font-sans font-normal" name="email" type="email" placeholder="Email" />
                     <input className="mt-2 p-3 border-2 rounded-2xl bg-gray-200 font-sans font-normal" name="password" type="password" placeholder="Password" />
-                    <button className="mt-2 p-3 border-2 rounded-2xl bg-blue-400 font-sans font-normal  text-white" type="submit">Sign Up</button>
+                    <button className="mt-2 p-3 border-2 rounded-2xl bg-blue-400 font-sans font-normal  text-white" type="button"
+                        onClick={handleSubmit}>Sign Up</button>
                     <p className="m-4">Already have an account ?
                         <span className="cursor-pointer m-2 text-red-600 hover:text-blue-800"
                             onClick={() => { navigate('/login') }}>Log in</span></p>
                 </form>
-
             </div>
         </>
     )
