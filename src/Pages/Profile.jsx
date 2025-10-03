@@ -40,8 +40,8 @@ const Profile = () => {
           <Link to={"replies/id"} className="link border-b-1 border-black pb-1">Replies</Link>
           <Link to={"reposts/id"} className="link border-b-1 border-black pb-1">Reposts</Link>
         </div>
+        <Outlet/>
       </div>
-      <Outlet/>
     </>
   );
 };
