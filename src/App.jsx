@@ -3,7 +3,6 @@ import Replies from "./Components/Profile/Replies";
 import Reposts from "./Components/Profile/Reposts";
 import Threads from "./Components/Profile/Threads";
 import "./index.css";
-import AddPost from "./Pages/AddPost";
 import Error from "./Pages/Error";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
@@ -11,6 +10,7 @@ import Notification from "./Pages/Notifications";
 import Profile from "./Pages/Profile";
 import Search from "./Pages/Search";
 import SignUp from "./Pages/SignUp";
+import SinglePost from "./Pages/SinglePost";
 import Protected from "./Protected";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <Route path="/home" element={<Protected />}>
           <Route path="" element={<Home />}></Route>
           <Route path="search" element={<Search />}></Route>
-          <Route path="post/:id" element={<AddPost />}></Route>
+          <Route path="post/:id" element={<SinglePost />}></Route>
           <Route path="profile" element={<Profile />}>
             <Route path="threads/:id" element={<Threads/>} />
             <Route path="replies/:id" element={<Replies/>} />

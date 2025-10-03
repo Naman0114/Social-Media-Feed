@@ -8,7 +8,7 @@ const Profile = () => {
         <div className=" flex flex-row  justify-between">
           <div className=" flex flex-col gap-3 p-3">
             <Typography sx={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-              Aditya_001
+              VijayKumar_001
             </Typography>
             <Typography sx={{ fontSize: "1rem" }}>This is a bio !</Typography>
             <Typography sx={{ fontSize: "0.8rem" }}>20 followers</Typography>
@@ -35,10 +35,10 @@ const Profile = () => {
             Edit Profile
           </Button>
         </div>
-        <div className="flex flex-row justify-around mx-auto w-lg text-sm mb-3">
+        <div className="flex flex-row justify-around mx-auto w-lg text-sm p-2 border-b-2">
           <Link to={"threads/id"} className="link border-b-1 border-black pb-1">Threads</Link>
-          <Link to={"replies/id"} className="link border-b-1 border-black pb-1">Replies</Link>
           <Link to={"reposts/id"} className="link border-b-1 border-black pb-1">Reposts</Link>
+          <Link to={"replies/id"} className="link border-b-1 border-black pb-1">Replies</Link>
         </div>
         <Outlet/>
       </div>

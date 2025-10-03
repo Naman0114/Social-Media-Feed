@@ -1,8 +1,10 @@
+import Post from "../Post";
 
 const Threads = () => {
   return (
-    <div>
-      <h1>Threads</h1>
+    <div className="flex flex-col w-sm mx-auto my-2">
+      <Post/>
+      <Post/>
     </div>
   )
 }

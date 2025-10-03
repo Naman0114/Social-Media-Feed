@@ -1,10 +1,16 @@
+import Comment from "../Comment";
 
 const Replies = () => {
   return (
+    <>
     <div>
-      Replies
+      <Comment/>
+      <Comment/>
+      <Comment/>
     </div>
-  )
-}
 
-export default Replies
+    </>
+  );
+};
+
+export default Replies;
