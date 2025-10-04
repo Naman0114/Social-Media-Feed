@@ -24,7 +24,7 @@ const SignUp = () => {
                         onClick={handleSubmit}>Sign Up</button>
                     <p className="m-4">Already have an account ?
                         <span className="cursor-pointer m-2 text-red-600 hover:text-blue-800"
-                            onClick={() => { navigate('/login') }}>Log in</span></p>
+                            onClick={() => { navigate('/') }}>Log in</span></p>
                 </form>
             </div>
         </>

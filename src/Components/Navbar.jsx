@@ -1,11 +1,10 @@
 import {
-    Heart,
-    HomeIcon,
-    Pin,
-    Plus,
-    Search,
-    TextAlignStart,
-    User,
+  Heart,
+  HomeIcon,
+  Plus,
+  Search,
+  TextAlignStart,
+  User
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -28,8 +27,7 @@ const Navbar = () => {
         <Link to={"/home/profile"}>
           <User className="mt-8" />
         </Link>
-        <Pin className="mt-20" />
-        <TextAlignStart className="mt-8" />
+        <TextAlignStart className="mt-38 cursor-pointer" />
       </div>
     </>
   );
