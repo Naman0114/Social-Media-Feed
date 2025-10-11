@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
+import AddPost from "./Components/AddPost";
 import EditProfile from "./Components/EditProfile";
 import Replies from "./Components/Profile/Replies";
 import Reposts from "./Components/Profile/Reposts";
@@ -19,17 +20,19 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/home" element={<Protected />}>
-          <Route path="" element={<Home />}></Route>
-          <Route path="search" element={<Search />}></Route>
-          <Route path="post/:id" element={<EditProfile />}></Route>
-          <Route path="profile" element={<Profile />}>
-            <Route path="threads/:id" element={<Threads/>} />
-            <Route path="replies/:id" element={<Replies/>} />
-            <Route path="reposts/:id" element={<Reposts/>} />
+        <Route path="/home" element={<Home />} />
+        <Route path="" element={<Protected />}>
+          <Route path="/search" element={<Search />} />
+          <Route path="/post/:id" element={<AddPost />} />
+          <Route path="/profile" element={<Profile />}>
+            <Route index element={<Navigate to="threads/id" replace />} />
+            <Route path="threads/:id" element={<Threads />} />
+            <Route path="replies/:id" element={<Replies />} />
+            <Route path="reposts/:id" element={<Reposts />} />
           </Route>
-          <Route path="notifications" element={<Notification />}></Route>
-          <Route path="*" element={<Error />}></Route>
+          <Route path="/edit-profile" element={<EditProfile />} />
+          <Route path="/notifications" element={<Notification />} />
+          <Route path="*" element={<Error />} />
         </Route>
       </Routes>
     </>

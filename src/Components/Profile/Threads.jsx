@@ -2,7 +2,7 @@ import Post from "../Post";
 
 const Threads = () => {
   return (
-    <div className="flex flex-col w-sm mx-auto my-2">
+    <div className="flex flex-col my-5 ml-31">
       <Post/>
       <Post/>
     </div>

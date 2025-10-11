@@ -32,7 +32,7 @@ const Post = () => {
             {posts.map((post, index) => (
                 <div
                     key={index}
-                    className="flex flex-col border rounded-3xl shadow-md shadow-gray-300 p-4"
+                    className="flex flex-col w-lg border rounded-3xl shadow-md shadow-gray-300 p-4"
                 >
                     <div className="flex items-center gap-3 mb-2">
                         <Avatar src={post.avatar} sx={{ width: 35, height: 35 }} />

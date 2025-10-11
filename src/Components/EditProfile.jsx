@@ -1,20 +1,26 @@
 import { Avatar, Button, Dialog, DialogTitle, Typography } from "@mui/material";
 import { X } from "lucide-react";
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 const EditProfile = () => {
   const [pic, setPic] = useState();
+  const [open, setOpen] = useState(true);
   const picRef = useRef();
+  const navigate=useNavigate();
 
-  const handleClose = () => {};
-
+  const handleClose = () => {
+    setOpen(false)
+    navigate('/home');
+  };
+  
   const handlePic = () => {
     picRef.current.click();
   };
   return (
     <>
       <Dialog
-        open={true}
+        open={open}
         sx={{
           "& .MuiDialog-paper": {
             backgroundColor: "#fff",
@@ -50,22 +56,44 @@ const EditProfile = () => {
             Change
           </Button>
         </div>
-        <Typography sx={{ fontSize: "1rem", fontWeight: "Bold" }}>
-          Username
-        </Typography>
-        <input type="text" value={"VijayKumar_001"} readOnly />
-        <Typography sx={{ fontSize: "1rem", fontWeight: "Bold" }}>
-          Email
-        </Typography>
-        <input type="text" value={"@gmail.com"} readOnly />
-        <Typography sx={{ fontSize: "1rem", fontWeight: "Bold" }}>
-          Bio
-        </Typography>
-        <input type="text" placeholder="About" />
-        <div className="mt-4">
+        <div className="flex flex-col gap-3 mt-4 ml-4">
+          <Typography sx={{ fontSize: "0.9rem", fontWeight: "Bold" }}>
+            Username
+          </Typography>
+          <input
+            type="text"
+            value={"VijayKumar_001"}
+            readOnly
+            className="text-sm focus:outline-none"
+          />
+          <Typography sx={{ fontSize: "0.9rem", fontWeight: "Bold" }}>
+            Email
+          </Typography>
+          <input
+            type="text"
+            value={"@gmail.com"}
+            readOnly
+            className="text-sm focus:outline-none"
+          />
+          <Typography sx={{ fontSize: "0.9rem", fontWeight: "Bold" }}>
+            Bio
+          </Typography>
+          <input
+            type="text"
+            placeholder="About"
+            className="text-sm focus:outline-none"
+          />
+        </div>
+        <div className="mt-8 mx-auto">
           <Button
-            size="large"
-            sx={{ borderRadius: 2, bgcolor: "skyblue", border: "blue" }}
+            size="small"
+            sx={{
+              borderRadius: 2,
+              bgcolor: "blue",
+              border: "blue",
+              color: "white",
+              fontSize: "0.8rem",
+            }}
           >
             Update
           </Button>

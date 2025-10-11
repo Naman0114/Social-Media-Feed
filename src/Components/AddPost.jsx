@@ -8,24 +8,30 @@ import {
 } from "@mui/material";
 import { Image, X } from "lucide-react";
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 const AddPost = () => {
 
   const [media, setMedia] = useState();
-
+  const [open, setOpen] = useState(true);
+  const navigate=useNavigate();
   const mediaRef = useRef();
 
   const handleMedia = () => {
     mediaRef.current.click();
   };
-  const handleClose = () => {};
+  
+  const handleClose = () => {
+    setOpen(false)
+    navigate('/home');
+  };
 
   const handlePost = () => {};
   return (
     <>
       <Dialog
-        open={true}
+        open={open}
         maxWidth={"lg"}
         sx={{
           "& .MuiDialog-paper": {
@@ -40,7 +46,7 @@ const AddPost = () => {
           <DialogTitle sx={{ margin: "auto", fontWeight: "bold" ,fontSize:"1.2rem"}}>
           New Thread...
         </DialogTitle>
-          <X onClick={handleClose} />
+          <X onClick={handleClose} className="cursor-pointer" />
         </div>
         <DialogContent sx={{ overflow: "hidden" }}>
           <div className="flex flex-row gap-4 mt-2">
