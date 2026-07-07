@@ -2,7 +2,7 @@ import { Menu, MenuItem } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const ProfileMenu = ({ anchorEl, handleClose }) => {
-  const open = Boolean(anchorEl);
+  const open = Boolean(anchorEl)
   const navigate = useNavigate();
 
   const handleEditProfile = () => {

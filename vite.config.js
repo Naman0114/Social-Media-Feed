@@ -5,6 +5,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/Social-Media-Feed/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
